@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text Summarizer</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
+
+    h1, h2 {
+        color: #333;
+    }
+
+    form {
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    textarea, input[type="url"], input[type="file"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        resize: vertical;
+    }
+
+    button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    #summaryOutput {
+        margin-top: 20px;
+    }
+
+    #summaryText {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        background-color: #fff;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Abstractive Text Summarizer</h1>
+    <form id="textSummarizerForm" action="/summarize" method="post" enctype="multipart/form-data">
+        <label for="textInput">Enter Text:</label><br>
+        <textarea id="textInput" name="textInput" rows="6" cols="50"></textarea><br><br>
+    
+        <label for="urlInput">Enter URL:</label><br>
+        <input type="url" id="urlInput" name="urlInput" placeholder="https://example.com"><br><br>
+    
+        <label for="documentInput">Upload Document File:</label><br>
+        <input type="file" id="documentInput" name="documentInput"><br><br>
+    
+        <label for="audioInput">Upload Audio File:</label><br>
+        <input type="file" id="audioInput" name="audioInput" accept="audio/*"><br><br>
+        
+        <button type="submit">Submit</button>
+    </form>
+    
+</div>
+</body>
+</html>
